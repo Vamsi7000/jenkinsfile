@@ -1,0 +1,21 @@
+pipeline
+{
+stages {
+  stage(' Deploy-Dev'){
+    steps{
+      echo 'hello'
+      }
+     }
+  stage('Deploy -QA'){
+    steps{
+        echo 'QA'
+        input "Does the staging env look ok?"
+        }
+    }
+  stage('Deploye - Production'){
+    steps{
+      echo 'Production'
+      }
+     }
+ }
+}
